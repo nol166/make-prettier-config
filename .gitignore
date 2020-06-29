@@ -3,3 +3,4 @@ node_modules
 *.js
 app
 make-prettier-config
+/bin

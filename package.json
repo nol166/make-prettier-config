@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Binary to initialize prettier in your project",
     "scripts": {
-        "build": "tsc && nexe app.js && chmod +x app"
+        "build": "tsc && node compile"
     },
     "dependencies": {
         "@types/inquirer": "^6.5.0",
