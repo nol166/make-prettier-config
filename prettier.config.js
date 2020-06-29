@@ -1,1 +1,0 @@
-module.exports = {"trailingComma":true,"tabWidth":4,"semi":false,"singleQuotes":true,"arrowParens":"avoid"}
