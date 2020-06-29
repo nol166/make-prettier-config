@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Binary to initialize prettier in your project",
     "scripts": {
-        "build": "nexe app.js"
+        "build": "tsc && nexe app.js"
     },
     "dependencies": {
         "@types/inquirer": "^6.5.0",
