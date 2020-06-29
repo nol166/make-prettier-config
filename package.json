@@ -3,11 +3,12 @@
     "version": "1.0.0",
     "description": "Binary to initialize prettier in your project",
     "scripts": {
-        "build": "tsc && nexe app.js"
+        "build": "tsc && nexe app.js && chmod +x app"
     },
     "dependencies": {
         "@types/inquirer": "^6.5.0",
         "inquirer": "^7.2.0",
-        "nexe": "^3.3.6"
+        "nexe": "^3.3.6",
+        "typescript": "^3.9.5"
     }
 }
