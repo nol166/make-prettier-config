@@ -1,0 +1,13 @@
+{
+    "name": "make-prettier-config",
+    "version": "1.0.0",
+    "description": "Binary to initialize prettier in your project",
+    "scripts": {
+        "build": "nexe app.js"
+    },
+    "dependencies": {
+        "@types/inquirer": "^6.5.0",
+        "inquirer": "^7.2.0",
+        "nexe": "^3.3.6"
+    }
+}

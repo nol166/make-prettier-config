@@ -7,35 +7,17 @@ prompt(questions)
     .then((answers: any) =>
         answers.isDefault ? createConfig(defaultOptions) : advancedSetup()
     )
-    .catch(error => {
-        if (error.isTtyError) {
-            console.log("Prompt couldn't be spawned in this env")
-        } else {
-            console.log(error)
-        }
-    })
+    .catch((error: Error) => console.error(error))
 
 const advancedSetup = () => {
     prompt(questionsAdvanced)
-        .then(answers => {
-            console.log('advancedSetup -> answers', answers)
-
-            // take custom options and convert it into an object that the createConfig function can consume
-
-            // call createConfig with resulting object
-        })
-        .catch(error => {
-            if (error.isTtyError) {
-                console.log("Prompt couldn't be spawned in this env")
-            } else {
-                console.log(error)
-            }
-        })
+        .then((answers: any) => createConfig(answers))
+        .catch((error: Error) => console.error(error))
 }
 
 const createConfig = (options: Object) => {
-    let content = 'string'
-    console.log('createConfig -> content', content)
-
-    // writeFile('prettier.config.json', content, err => console.log(err))
+    let content = `module.exports = ${JSON.stringify(options)}`
+    writeFile('prettier.config.js', content, err =>
+        err ? console.log(err) : console.log('Success!')
+    )
 }
