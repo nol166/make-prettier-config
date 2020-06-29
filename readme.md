@@ -5,11 +5,17 @@ Small binary to initialize prettier. By default prettier doesn't work unless you
 To download: https://github.com/nol166/make-prettier-config/releases/
 
 ### Build
+
 `yarn build`
 
-## TODO:
-- publish npm package
-- support multiple OSs
+### Issues
 
+-   Releases are executable without running `chmod +x make-prettier-config`
+
+## Todo:
+
+-   create signed binaries
+-   publish npm package
+-   support multiple OSs
 
 <img src='./assets/screen.png'>
