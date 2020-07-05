@@ -15,7 +15,7 @@ const advancedSetup = () => {
         .catch((error: Error) => console.error(error))
 }
 
-const createConfig = (options: Object) => {
+const createConfig = (options: object) => {
     let content = `module.exports = ${JSON.stringify(options)}`
     writeFile('prettier.config.js', content, err =>
         err ? console.log(err) : console.log('Success!')
